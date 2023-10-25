@@ -69,7 +69,7 @@ os.rmdir('OS-DEMO-2')
 os.removedirs('OS-Demo-3/Sub-Dir-1')
 ```
 
-**Rename file**
+**Rename a file**
 
 ```python
 import os
@@ -77,7 +77,7 @@ import os
 os.rename('test.txt', 'demo.txt')
 ```
 
-**Print info on file**
+**Print info on a file**
 
 ```python
 import os
@@ -102,6 +102,11 @@ for dirpath, dirnames, filenames in os.walk('/Users/coreyschafer/Desktop/'):
 
 ```python
 import os
+# load library for file base env variables
+from dotenv import load_dotenv			# needs to be installed :pip install python-dotenv
+
+# load env variables from file to 'env'
+load_dotenv(path_to_environment_variables)
 
 # print all my environment variables
 print(os.environ)
